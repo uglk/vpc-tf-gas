@@ -30,14 +30,14 @@ jobs:
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
 
-    - name: Terraform Format
-      run: terraform fmt
+    # - name: Terraform Format
+    #   run: terraform fmt
     
-    - name: Terraform Init
-      run: terraform init
+    # - name: Terraform Init
+    #   run: terraform init
 
-    - name: Terraform validate
-      run: terraform validate
+    # - name: Terraform validate
+    #   run: terraform validate
     
     # - name: Terraform Workspace creation
     #   run: terraform workspace new addanki
@@ -45,8 +45,12 @@ jobs:
     - name: switch to addanki workspace
       run: terraform workspace select addanki
 
-    - name: Terraform Plan
-      run: terraform plan -var-file=addanki-vpc.tfvars
+    # - name: Terraform Plan
+    #   run: terraform plan -var-file=addanki-vpc.tfvars
 
+    # - name: Terraform Apply
+    #   run: terraform apply -var-file=addanki-vpc.tfvars --auto-approve 
+
+    
     - name: Terraform Apply
-      run: terraform apply -var-file=addanki-vpc.tfvars --auto-approve 
+      run: terraform destroy -var-file=addanki-vpc.tfvars --auto-approve
