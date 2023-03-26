@@ -40,7 +40,7 @@ jobs:
       run: terraform validate
     
     - name: Terraform Workspace creation
-      run: terraform workspace create addanki
+      run: terraform workspace new addanki
 
     - name: switch to addanki workspace
       run: terraform workspace select addanki
