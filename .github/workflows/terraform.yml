@@ -27,9 +27,6 @@ jobs:
         role-session-name: connecttoaws
         aws-region: ${{ env.AWS_REGION }}
 
-    - name: Print assumed role
-      uses: aws sts get-caller-identity
-
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
 
