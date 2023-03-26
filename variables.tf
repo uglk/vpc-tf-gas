@@ -2,9 +2,9 @@
 variable "location" {
   default = "us-east-1"
 }
-variable "user" {
-  default = "virginia"
-}
+# variable "user" {
+#   default = "virginia"
+# }
 variable "vpc_name" {
   default = "example"
 }
