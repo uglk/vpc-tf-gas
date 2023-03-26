@@ -23,12 +23,9 @@ jobs:
     - name: configure aws credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        role-to-assume: arn:aws:iam::663435084521:role/gha-oidc
+        role-to-assume: arn:aws:iam::663435084521:role/github-actions-oidc
         role-session-name: connecttoaws
         aws-region: ${{ env.AWS_REGION }}
-
-    - name: Print AWS SSM Parameter
-      uses: aws ssm get-parameter --name=hello_aws_gh_oidc --query Parameter.Value
 
     - name: Print assumed role
       uses: aws sts get-caller-identity
