@@ -15,7 +15,7 @@ terraform {
 
 provider "aws" {
   region  = var.location
-  profile = var.user
+  # profile = var.user
 }
 
 

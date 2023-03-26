@@ -1,5 +1,5 @@
 location             = "us-east-1"
-user                 = "virginia"
+#user                 = "virginia"
 vpc_name             = "addanki"
 pub_sub              = "pub"
 pri_sub              = "pri"
