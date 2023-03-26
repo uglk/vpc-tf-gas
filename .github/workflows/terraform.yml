@@ -33,13 +33,12 @@ jobs:
     - name: Terraform Format
       run: terraform fmt
     
+    - name: Terraform Init
+      run: terraform init
+      
     - name: Terraform validate
       run: terraform validate
     
-
-    - name: Terraform Init
-      run: terraform init
-
     - name: Terraform Workspace creation
       run: terraform workspace create addanki
 
